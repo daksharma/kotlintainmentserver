@@ -3,3 +3,4 @@ graphene-gae
 Flask
 Flask-GraphQL
 werkzeug
+gunicorn
