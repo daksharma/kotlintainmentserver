@@ -7,7 +7,7 @@ from model.person import Person
 
 
 class TMDBMovies:
-    tmdb.API_KEY = 'KEY FOR LOCAL TESTING' or os.environ.get("TMDB_KEY")
+    tmdb.API_KEY = os.environ.get("TMDB_KEY")
 
     @staticmethod
     def tmdb_movie(self, movie_id: int()):

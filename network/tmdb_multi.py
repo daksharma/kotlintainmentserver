@@ -5,7 +5,7 @@ from model.multiresult import MultiSearchResult
 
 
 class TMDBMulti:
-    tmdb.API_KEY = "KEY FOR LOCAL TESTING" or os.environ.get('TMDB_KEY')
+    tmdb.API_KEY = os.environ.get('TMDB_KEY')
 
     @staticmethod
     def search(self, search_string: str()):
