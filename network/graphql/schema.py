@@ -20,8 +20,4 @@ class Query(ObjectType):
         return m
 
 
-class Mutations(ObjectType):
-    pass
-
-
 schema = Schema(query = Query)
