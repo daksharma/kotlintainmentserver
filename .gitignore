@@ -142,6 +142,7 @@ appengine-generated/
 .idea/*
 app.yaml
 
+
 # Gradle:
 .idea/**/gradle.xml
 .idea/**/libraries
