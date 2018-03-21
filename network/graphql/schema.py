@@ -3,7 +3,8 @@ from graphene import Field, relay, List, Int, ObjectType, Schema, String
 from model.movie import Movie
 from model.person import Person
 
-from network.tmdb_search import TMDBSearch
+from network.tmdb_search import TMDBMovies
+from network.tmdb_person import TMDBPerson
 
 
 class Query(ObjectType):
@@ -11,11 +12,11 @@ class Query(ObjectType):
     movie = Field(Movie, id = Int(required = True))
 
     def resolve_person(self, info, id):
-        p = TMDBSearch.tmdb_person(self, person_id = id)
+        p = TMDBPerson.tmdb_person(self, person_id = id)
         return p
 
     def resolve_movie(self, info, id):
-        m = TMDBSearch.tmdb_movie(self, movie_id = id)
+        m = TMDBMovies.tmdb_movie(self, movie_id = id)
         return m
 
 
