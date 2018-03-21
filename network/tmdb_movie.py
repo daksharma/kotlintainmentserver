@@ -10,10 +10,6 @@ class TMDBMovies:
     tmdb.API_KEY = 'KEY FOR LOCAL TESTING' or os.environ.get("TMDB_KEY")
 
     @staticmethod
-    def tmdb_search(self, user_string: str()):
-        pass
-
-    @staticmethod
     def tmdb_movie(self, movie_id: int()):
         m = tmdb.Movies(movie_id)
         response = m.info()
