@@ -1,8 +1,8 @@
 #Kotlintainment Server
-Search Movies, Tv Shows, Actors
-basic graphql around TMDBSimple library for python
+Search for Movies, Tv Shows, Actors with basic graphql around TMDBSimple library for python
 
 Search movie, person, show using an id.
+
 Search with user specified input.
 
 *note: make sure to have The Movie DB Api Key. Get it [Here](https://developers.themoviedb.org/3/getting-started/introduction)*
@@ -77,3 +77,5 @@ query {
   }
 }
 ```
+
+######*note: ongoing project*
