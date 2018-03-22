@@ -38,4 +38,5 @@ class Movie(ObjectType):
     runtime = Int()
     revenue = Int()
     status = String()
+    release_date = String()
     credits = Field(Credits)

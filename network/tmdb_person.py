@@ -5,7 +5,7 @@ from model.person import Person
 
 
 class TMDBPerson:
-    tmdb.API_KEY = os.environ.get("TMDB_KEY")
+    tmdb.API_KEY = os.environ.get('TMDB_KEY')
 
     @staticmethod
     def tmdb_person(self, person_id: int()):

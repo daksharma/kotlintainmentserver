@@ -12,14 +12,29 @@ class TMDBMulti:
         search = tmdb.Search()
         response = search.multi(query = search_string)
         result = list()
+
         for r in response['results']:
-            result.append(MultiSearchResult(id = r['id'],
-                                            title = r['title'],
-                                            original_title = r['original_title'],
-                                            overview = r['overview'],
-                                            media_type = r['media_type'],
-                                            backdrop_path = r['backdrop_path'],
-                                            poster_path = r['poster_path'],
-                                            release_date = r['release_date'],
-                                            adult = r['adult']))
+            title_name = str()
+            if r['media_type'] == "person" or r['media_type'] == "tv":
+                title_name = r['name']
+
+            if r['media_type'] == "movie":
+                title_name = r['title']
+
+            if r['media_type'] == "tv" or r['media_type'] == "movie":
+                image_path = r['poster_path']
+            else:
+                image_path = r['profile_path']
+
+            if r['media_type'] == "tv" or r['media_type'] == "movie":
+                overview = r['overview']
+            else:
+                overview = "null"
+
+            result.append(
+                MultiSearchResult(id = r['id'],
+                                  title_name = title_name,
+                                  overview = overview,
+                                  media_type = r['media_type'],
+                                  image_path = image_path))
         return result
