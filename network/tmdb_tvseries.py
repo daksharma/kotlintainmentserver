@@ -51,6 +51,7 @@ class TMDBTVSeries:
                       name = tv_info['name'],
                       original_name = tv_info['original_name'],
                       original_language = tv_info['original_language'],
+                      overview = tv_info['overview'],
                       in_production = tv_info['in_production'],
                       first_air_date = tv_info['first_air_date'],
                       last_air_date = tv_info['last_air_date'],

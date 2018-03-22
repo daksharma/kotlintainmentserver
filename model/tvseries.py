@@ -11,6 +11,7 @@ class TVSeries(ObjectType):
     name = String()
     original_name = String()
     original_language = String()
+    overview = String()
     last_air_date = String()
     first_air_date = String()
     number_of_episodes = Int()
