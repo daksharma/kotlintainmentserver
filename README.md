@@ -1,4 +1,4 @@
-#Kotlintainment Server
+# Kotlintainment Server
 Search for Movies, Tv Shows, Actors with basic graphql around TMDBSimple library for python
 
 Search movie, person, show using an id.
@@ -8,7 +8,7 @@ Search with user specified input.
 *note: make sure to have The Movie DB Api Key. Get it [Here](https://developers.themoviedb.org/3/getting-started/introduction)*
 
 
-##Libraries Used:
+## Libraries Used:
 [Flask](http://flask.pocoo.org/)
 
 [Flask-GraphQL](https://github.com/graphql-python/flask-graphql)
@@ -18,12 +18,14 @@ Search with user specified input.
 [TMDBSimple](https://github.com/celiao/tmdbsimple)
 
 
-####Hosted on Google App Engine
+#### Hosted on Google App Engine
 Check the link [Here](https://kotlintainment.appspot.com/graphql)
 
 
-####Test Example:
+#### Test Example:
+
 copy paste this example in the graphiql viewer.
+
 ```json
 query {
   movie(id:603) {
@@ -78,4 +80,4 @@ query {
 }
 ```
 
-######*note: ongoing project*
+###### *note: ongoing project*
