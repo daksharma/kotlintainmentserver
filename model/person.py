@@ -1,4 +1,6 @@
-from graphene import ObjectType, String, Int, List, Float
+from graphene import ObjectType, String, Int, List, Float, Field
+
+from model.credits import Credits
 
 
 class Person(ObjectType):
@@ -14,3 +16,4 @@ class Person(ObjectType):
     profile_path = String()
     place_of_birth = String()
     popularity = Float()
+    credits = Field(Credits)

@@ -9,7 +9,7 @@ class TMDBMovies:
     tmdb.API_KEY = os.environ.get('TMDB_KEY')
 
     @staticmethod
-    def tmdb_movie(self, movie_id: int()):
+    def movie(self, movie_id: int()):
         m = tmdb.Movies(movie_id)
         response = m.info()
 

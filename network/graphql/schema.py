@@ -18,11 +18,11 @@ class Query(ObjectType):
     tvseries = Field(TVSeries, tv_id = Int(required = True))
 
     def resolve_person(self, info, id):
-        p = TMDBPerson.tmdb_person(self, person_id = id)
+        p = TMDBPerson.person(self, person_id = id)
         return p
 
     def resolve_movie(self, info, id):
-        m = TMDBMovies.tmdb_movie(self, movie_id = id)
+        m = TMDBMovies.movie(self, movie_id = id)
         return m
 
     def resolve_search(self, info, search_string):
